@@ -1,0 +1,129 @@
+Interpolation = {{ data_value }}
+
+data bind = <a v-bind:attribute = "data_value"
+
+
+event listener = <button v-on:click="add(5)" = **in Vue** 
+	methods: {
+  	add(num){
+  		this.counter = this.counter + num
+  	}
+
+ 	<input type='text' v-on:input="method" || "method(name)" = ** in Vue **
+ 		data(){
+ 			return{
+ 				name: ''
+ 			}
+ 		}
+
+ 		methods: {
+ 			setName(e){
+ 				this.name = e.target.value
+ 			}
+
+Event modifiers
+
+<form v-on:submit.prevent="submittedForm"
+	
+	data(){
+ 			return{
+ 				name: ''
+ 			}
+ 		}
+
+ 		methods: {
+ 			submittedForm(){
+ 				alert("Submitted")
+ 			}
+
+display once a value and don't updated 			
+<p v-once> {{ counterOnce }}
+
+
+
+MODEL
+
+v-model = is a two way binding it listens to input coming 1 way and output ( data-binding & event handling)
+
+methods:{ 
+	outputFullName() {
+		return this.name + ' ' + 'Lastname'
+	}
+}
+
+METHODS -> use for event bindings
+
+COMPUTED -> Use with data-binding
+
+	-Vue is aware of the computed properties
+
+	-wants an object and you define a bunch of methods
+
+	{{ only use methods if you want to recalculate a value }}
+
+	HTML -> point it ("method") vue uses it like properies
+
+	computed: {
+		methodName(){
+			return this.name + ' ' + this.lastname
+		}
+	}
+
+
+WATCH -> none data update change backend
+
+ie -> send HTTP request
+
+- whenever a propery in data(){} changes it re-executes
+
+- Wants an object 
+
+watch: {
+	name(value) {
+		this.fullname = value + ' ' + 'Lastname'
+	},
+	counter(value){
+		if(value > 50 ){
+			this.counter = 0
+		}
+	}
+}
+
+
+
+SHORTCUTS
+
+v-on = @    
+example @click="add(10)"
+
+v-bind = :
+ex: :value="..."
+
+
+#32 STYLING 
+
+:style = "{borderColor: boxASelected? 'red' : '#ccc'}"
+
+:class="boxASelected ? 'demo active' : 'demo' " 
+
+class="demo" 
+:class="{active: boxASelected} " 
+
+
+:class="['demo', {active: boxBSelected}] "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
