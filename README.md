@@ -13,26 +13,25 @@ Interpolation is between double brackets ei. `<p>{{ data_value }} <p/>`
 **In Vue** 
 
 ```js
-	methods: {
-  	add(num){
-  		this.counter = this.counter + num
-  	}
+methods: {
+	add(num){
+		this.counter = this.counter + num
+	}
  ````
  `<input type='text' v-on:input="setName (or setName(value) will work too ) " >`
 
 **in Vue**
  
 ```js	
-	data(){
-		return{
-			name: ''
-		}
+data(){
+	return{
+		name: ''
 	}
-
-	methods: {
-		setName(e){
-			this.name = e.target.value
-	}
+},
+methods: {
+	setName(e){
+		this.name = e.target.value
+}
 ```
 
 ## Event modifiers
@@ -40,16 +39,16 @@ Interpolation is between double brackets ei. `<p>{{ data_value }} <p/>`
 `<form v-on:submit.prevent="submittedForm"/>`
 
 ```js
-	data(){
- 			return{
- 				name: ''
- 			}
- 		},
-
-	methods: {
-		submittedForm(){
-			alert("Submitted")
+data(){
+	return{
+		name: ''
 	}
+},
+
+methods: {
+	submittedForm(){
+		alert("Submitted")
+}
 ```
 
 ## Display once a value and don't updated 			
@@ -83,11 +82,11 @@ Use with data-binding
 In the HTML file **point** to it ("method") Vue uses it like properies
 
 ```js
-	computed: {
-		methodName(){
-			return this.name + ' ' + this.lastname
-		}
+computed: {
+	methodName(){
+		return this.name + ' ' + this.lastname
 	}
+}
 ````
 
 ## watch 
