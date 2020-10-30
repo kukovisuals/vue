@@ -14,9 +14,10 @@ Interpolation is between double brackets ei. `<p>{{ data_value }} <p/>`
 
 ```js
 methods: {
-	add(num){
-		this.counter = this.counter + num
-	}
+ add(num){
+  this.counter = this.counter + num
+ }
+}
  ````
  `<input type='text' v-on:input="setName (or setName(value) will work too ) " >`
 
@@ -24,13 +25,14 @@ methods: {
  
 ```js	
 data(){
-	return{
-		name: ''
-	}
+ return{
+  name: ''
+ }
 },
 methods: {
-	setName(e){
-		this.name = e.target.value
+ setName(e){
+  this.name = e.target.value
+ }
 }
 ```
 
@@ -40,14 +42,15 @@ methods: {
 
 ```js
 data(){
-	return{
-		name: ''
-	}
+ return{
+  name: ''
+ }
 },
 
 methods: {
-	submittedForm(){
-		alert("Submitted")
+ submittedForm(){
+  alert("Submitted")
+ }
 }
 ```
 
@@ -61,9 +64,9 @@ methods: {
 
 ```js
 methods:{ 
-	outputFullName() {
-		return this.name + ' ' + 'Lastname'
-	}
+ outputFullName() {
+  return this.name + ' ' + 'Lastname'
+ }
 }
 ```
 
