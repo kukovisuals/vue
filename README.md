@@ -198,8 +198,32 @@ To view the index of the for loop:
 
 `<li v-for="(goal, i) in goals">{{ goal }} - {{ i }}</li>`
 
+Displaing Objects:
 
+`<li v-for="(value, key, i) in {name:'Fretz', cash:1532132}"> {{i}} - {{key}}: {{value}} </li>`
 
+Displaying a number of defined elements:
+
+`<li v-for="num in 10">{{ num }}</li>`
+
+###### Removing Elements 
+
+For removing elements from an array the same index name has to be used in the `@click` attribute
+
+```html
+<li v-for="(goal, i) in goals" @click="removeEl(i)">{{ goal }} - {{ i }}</li>
+```
+
+```js
+methods: {
+	addGoal(){
+		this.goals.push(this.enteredGoalValue)
+	},
+  removeEl(index){
+    this.goals.splice(index, 1)
+  }
+}
+```
 
 
 
