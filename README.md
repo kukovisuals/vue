@@ -94,15 +94,18 @@ computed: {
 
 ## watch 
 
-None data update change backend
+Keep track of properties constantly, where you can read the current value of the propety on time 
 
 	ie -> send HTTP request
-
 	- whenever a propery in data(){} changes it re-executes
-
 	- Wants an object 
 
 ```js
+data(){
+	name: '',
+	counter: 0
+},
+
 watch: {
 	name(value) {
 		this.fullname = value + ' ' + 'Lastname'
@@ -225,8 +228,23 @@ methods: {
 }
 ```
 
+###### :key
+
+Keep the same key index adding the `:key` keyword
+
+```html
+<li v-for="(goal, i) in goals" :key="goal" @click="removeEl(i)">
+	<p> {{ goal }} - {{ i }} </p>
+  <input type="text" @click.stop>
+</li>
+```
 
 
+#### Notes
+
+###### Random number between 2 values
+
+	`Math.floor(Math.random() * (max - min ) + min)`
 
 
 
