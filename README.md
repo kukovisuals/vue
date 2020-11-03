@@ -136,7 +136,14 @@ ex: `:value="..."`
 	class="demo" 
 	:class="{active: boxASelected} " 
 
+For adding classes in an array form
+
 	:class="['demo', {active: boxBSelected}] "
+
+Adding classes dynamically, where the first value is a class and it checks if a condition is true from the **vue** __app.js__ file
+
+	 :class = "{'log--player' : log.actionBy == 'player', 'log--monster' : log.actionBy == 'monster' }"
+
 
 # Rendering Conditional Content & List 
 
@@ -247,7 +254,21 @@ Keep the same key index adding the `:key` keyword
 	`Math.floor(Math.random() * (max - min ) + min)`
 
 
+## ref
 
+When ever you want to store a value a retrieve it whenever you need it 
+
+```html
+<input ref="someText" /> 
+```
+
+```js
+methods:{
+	someInput(){
+		this.message = this.$refs.someText.value
+	}
+}
+````
 
 
 
